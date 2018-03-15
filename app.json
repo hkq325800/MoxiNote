@@ -1,11 +1,37 @@
 {
-  "pages":[
-    "pages/index/index"
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/folder/folder",
+    "pages/note/note"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+  "window": {
+    "enablePullDownRefresh": false,
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#66ccff",
+    "navigationBarTitleText": "MoxiNote",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "iconPath": "res/tabar_home_normol.png",
+        "selectedIconPath": "res/tabar_home_select.png",
+        "pagePath": "pages/note/note",
+        "text": "笔记"
+      },
+      {
+        "iconPath": "res/tabar_me_normol.png",
+        "selectedIconPath": "res/tabar_me_select.png",
+        "pagePath": "pages/folder/folder",
+        "text": "笔记本"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
 }
