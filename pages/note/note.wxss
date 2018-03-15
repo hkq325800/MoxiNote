@@ -5,13 +5,16 @@
 .top {
   background: #66ccff;
   padding: 12px 12px 12px 12px;
+  align-items: center;
 }
 .bottom{
   padding: 16px 6px 16px 12px;
+  align-items: center;
 }
 .title{
-  flex: 1;
   color:white;
+  flex: 1;
+  margin-right: 10px;
 }
 .date{
   color:white;
@@ -19,9 +22,15 @@
 .content{
   color:#66ccff;
   flex: 1;
+  margin-right: 10px;
 }
 .folder{
   color:white;
   background: #66ccff;
   padding: 2px 6px 2px 6px;
+  max-width: 90px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-line-clamp:2;
 }
