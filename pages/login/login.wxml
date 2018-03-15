@@ -1,27 +1,28 @@
 <view class="container">
   <view class="form-wrap">
-    <view class="flex-wrap input-wrap">
+    <view class="row input-wrap">
       <text class="label">用户名</text>
       <!-- value为初始内容 -->
-      <input id="username" class="account-info-input" value="{{user.username}}" bindinput="updateUsername" confirm-type="next"/>
+      <input id="username" class="input" value="{{user.username}}" bindinput="updateUsername" confirm-type="next"/>
     </view>
-    <view class="flex-wrap input-wrap">
-      <text class="label">{{status!=0?'新密码':'密码'}}</text>
-      <input password id="password" class="account-info-input" bindinput="updatePassword" confirm-type="{{status==1?'next':'done'}}"/>
+    <view class="row input-wrap">
+      <text class="label">{{status!=0?'新密码':'密码　'}}</text>
+      <input password id="password" class="input" bindinput="updatePassword" confirm-type="{{status==1?'next':'done'}}"/>
     </view>
 
-    <view class="flex-wrap input-wrap" wx:if="{{status==1}}">
+    <view class="row input-wrap" wx:if="{{status==1}}">
       <text class="label">新密码</text>
-      <input password id="password" class="account-info-input" bindinput="updatePassword" confirm-type="next"/>
+      <input password id="password" class="input" bindinput="" confirm-type="next"/>
     </view>
 
-    <view class="flex-wrap input-wrap" wx:if="{{status!=0}}">
+    <!-- wx:if="{{status!=0}}" -->
+    <view class="row input-wrap" >
       <text class="label">验证码</text>
-      <input password id="password" class="account-info-input" bindinput="updatePassword" confirm-type="done"/>
-      <button class="btn" type="primary" style="background-color:'#1aad19'" bindtap="getCode">{{'获取验证码'}}</button>
+      <input password id="password" class="input" bindinput="" confirm-type="done"/>
+      <text class="button" style="background-color:'#1aad19';" bindtap="getCode">获取验证码</text> 
     </view>
   </view>
-  <view class='flex-wrap'>
+  <view class='row'>
     <button class="btn" type="primary" style="background-color:{{status==0?'#66ccff':'#1aad19'}}" bindtap="login">{{status==0?'　登录　':'返回登录'}}</button>
     <button class="btn" type="primary" style="background-color:{{status==1?'#66ccff':'#1aad19'}}" bindtap="signUp">{{status==1?'注册确认':'　注册　'}}</button>
     <button class="btn" type="primary" style="background-color:{{status==2?'#66ccff':'#1aad19'}}" bindtap="findBack">{{status==2?'找回密码':'忘记密码'}}</button>

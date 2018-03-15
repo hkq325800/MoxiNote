@@ -9,8 +9,7 @@
   display: flex;
   flex-direction: row;
 }
-.input-wrap {
-  display: flex;
+/* .input-wrap {
   background: #fff;
   border-bottom: 1px solid #eee;
   margin: 0 -12px;
@@ -20,14 +19,13 @@
 }
 .label {
   color: #999;
-  width:6em;
-}
+  width:4.5em;
+} 
 .account-info-input {
   font-size: 18px;
   line-height: 100%;
   height: 100%;
-  width: 100%;
-}
+}*/
 .hint,
 .error{
   display: block;
@@ -41,4 +39,30 @@
 .btn{
   margin-top: 10px;
   margin-right: 8px;
+  border-radius: 12px;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.input-wrap{
+  padding: 10px 0;
+  justify-content: flex-start;
+  border-bottom: 2px solid #eee;
+}
+.label{
+  color: #999;
+  margin-right: 16px;
+}
+.input{
+  font-size: 16px;
+  margin-right: 8px;
+}
+.button{
+  background: #1aad19;
+  color: #fff;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 14px;
 }

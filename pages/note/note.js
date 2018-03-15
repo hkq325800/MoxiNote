@@ -5,7 +5,92 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    list:[{
+      id: 0,
+      title:'t1t1t1t1t1t1t1t1t1t1t1t1t1t1t1t1',
+      content:'c1c1c1c1c1c1c1c1c1c1c 1c1c1c1c1c1c1c1c1 c1c1c1c1c1c1c1c1c1c 1c1c1c1c1c1c1c1c1c1',
+      date:'2018年02月07日',
+      folder:'好长好长的笔记本',
+    }, {
+      id: 1,
+      title: 't1',
+      content: 'c1',
+      date: 'd1',
+      folder: 'f1',
+    }, {
+      id: 2,
+      title: 't1',
+      content: 'c1',
+      date: 'd1',
+      folder: 'f1',
+    }, {
+      id: 3,
+      title: 't1',
+      content: 'c1',
+      date: 'd1',
+      folder: 'f1',
+    }, {
+      id: 4,
+      title: 't1',
+      content: 'c1',
+      date: 'd1',
+      folder: 'f1',
+    }, {
+      id: 5,
+      title: 't1',
+      content: 'c1',
+      date: 'd1',
+      folder: 'f1',
+    }, {
+      id: 6,
+      title: 't1',
+      content: 'c1',
+      date: 'd1',
+      folder: 'f1',
+    }, {
+      id: 7,
+      title: 't1',
+      content: 'c1',
+      date: 'd1',
+      folder: 'f1',
+    }, {
+      id: 8,
+      title: 't1',
+      content: 'c1',
+      date: 'd1',
+      folder: 'f1',
+    }, {
+      id: 9,
+      title: 't1',
+      content: 'c1',
+      date: 'd1',
+      folder: 'f1',
+    }, {
+      id: 10,
+      title: 't1',
+      content: 'c1',
+      date: 'd1',
+      folder: 'f1',
+    }, {
+      id: 11,
+      title: 't1',
+      content: 'c1',
+      date: 'd1',
+      folder: 'f1',
+    }, {
+      id: 12,
+      title: 't1',
+      content: 'c1',
+      date: 'd1',
+      folder: 'f1',
+    },]
+  },
+
+  detail:function(e){
+    console.log(JSON.stringify(e.currentTarget.dataset))
+    wx.navigateTo({
+      url: './detail?id=' + e.currentTarget.dataset.id,
+    })
   },
 
   /**

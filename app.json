@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/login/login",
+    "pages/note/note",
     "pages/index/index",
+    "pages/login/login",
     "pages/folder/folder",
-    "pages/note/note"
+    "pages/note/detail"
   ],
   "window": {
     "enablePullDownRefresh": false,
@@ -14,12 +15,22 @@
     "navigationStyle": "default"
   },
   "tabBar": {
+    "position": "bottom",
+    "backgroundColor": "#000",
+    "selectedColor": "white",
+    "color": "gray",
     "list": [
       {
         "iconPath": "res/tabar_home_normol.png",
         "selectedIconPath": "res/tabar_home_select.png",
         "pagePath": "pages/note/note",
-        "text": "笔记"
+        "text": "笔　记"
+      },
+      {
+        "iconPath": "res/tabar_home_normol.png",
+        "selectedIconPath": "res/tabar_home_select.png",
+        "pagePath": "pages/index/index",
+        "text": "首　页"
       },
       {
         "iconPath": "res/tabar_me_normol.png",

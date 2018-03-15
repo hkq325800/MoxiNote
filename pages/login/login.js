@@ -58,6 +58,7 @@ Page({
       wx.showToast({
         title: '找回成功',
       })
+      wx.navigateBack()
     })
   },
   save: function () {
@@ -80,5 +81,10 @@ Page({
     //     error: error.message,
     //   });
     // });
+  },
+  getCode: function(){
+    wx.showToast({
+      title: '获取验证码成功！',
+    })
   }
 });

@@ -1,1 +1,27 @@
 /* pages/note/note.wxss */
+.todo-list {
+  width: 100%;
+}
+.top {
+  background: #66ccff;
+  padding: 12px 12px 12px 12px;
+}
+.bottom{
+  padding: 16px 6px 16px 12px;
+}
+.title{
+  flex: 1;
+  color:white;
+}
+.date{
+  color:white;
+}
+.content{
+  color:#66ccff;
+  flex: 1;
+}
+.folder{
+  color:white;
+  background: #66ccff;
+  padding: 2px 6px 2px 6px;
+}

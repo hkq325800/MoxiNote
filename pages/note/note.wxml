@@ -1,2 +1,13 @@
 <!--pages/note/note.wxml-->
-<text>pages/note/note.wxml</text>
+<view class="todo-list">
+  <block wx:for="{{list}}" wx:for-item="item" wx:key="item.id">
+    <view class="top row">
+      <text class="title">{{item.title}}</text>
+      <text class="date">{{item.date}}</text>
+    </view>
+    <view class="bottom row" bindtap="detail" data-id="{{item.id}}">
+      <text class="content">{{item.content}}</text>
+      <text class="folder">{{item.folder}}</text>
+    </view>
+  </block>
+</view>
