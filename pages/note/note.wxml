@@ -1,13 +1,17 @@
 <!--pages/note/note.wxml-->
 <view class="todo-list">
-  <block wx:for="{{list}}" wx:for-item="item" wx:key="item.id">
-    <view class="top row">
-      <text class="title">{{item.title}}</text>
-      <text class="date">{{item.date}}</text>
+  <list class="note-list" id="list" listSize="{{list.length}}">
+    <view slot="list">
+      <view wx:for="{{list}}" wx:for-item="item" wx:key="id">
+        <view class="top row">
+          <text class="title">{{item.tempTitle}}</text>
+          <text class="date">{{item.date}}</text>
+        </view>
+        <view class="bottom row" bindtap="detail" data-id="{{item.id}}">
+          <text class="content">{{item.tempContent}}</text>
+          <text class="folder">{{item.tempFolder}}</text>
+        </view>
+      </view>
     </view>
-    <view class="bottom row" bindtap="detail" data-id="{{item.id}}">
-      <text class="content">{{item.content}}</text>
-      <text class="folder">{{item.folder}}</text>
-    </view>
-  </block>
+  </list>
 </view>

@@ -1,0 +1,82 @@
+/* component/list/list.wxss */
+
+.top{
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.empty{
+  z-index: -1;
+}
+.list{
+  position: relative;
+}
+
+.loadmore{
+  width: 750rpx;
+  height: 100rpx;
+  background-color: palevioletred;
+  border:1px solid palevioletred;
+  text-align: center;
+  line-height: 100rpx;
+  font-family: PingFangSC-Regular;font-size: 24rpx;
+  color: #333333;
+  opacity: 1;
+  /* animation:fadein 500ms ease; */
+   
+}
+.shadow{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.out{
+  /* animation:fadeout 500ms ease; */
+  /* opacity: 0;
+  height: 0; */
+}
+
+@keyframes fadeout{
+  from{
+    opacity: 1;
+    height:100rpx;
+  }
+  to{
+    opacity:0;
+    height:00rpx;
+  }
+}
+
+@keyframes fadein{
+  to{
+    opacity: 1;
+    height:100rpx;
+  }
+  from{
+    opacity:0;
+    height:00rpx;
+  }
+}
+
+
+
+.loading{
+  width: 750rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+  background-color: white;
+  border: 1px solid salmon;
+  font-family: PingFangSC-Regular;font-size: 24rpx;
+  line-height: 100rpx;
+  text-align: center;
+  transition: all 800ms ease;
+}

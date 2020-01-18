@@ -1,0 +1,4 @@
+<view style="top:{{emptyTop}}" class="wrapper">
+  <image src="{{emptySrc}}" class="image"></image>
+  <text class="text">{{emptyHintStr}}</text>
+</view>

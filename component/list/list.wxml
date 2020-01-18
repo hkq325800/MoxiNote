@@ -1,0 +1,12 @@
+<!--component/list/list.wxml-->
+<view>
+  <view class='top'>
+    <slot name="top"></slot>
+  </view>
+  <empty emptyTop="{{emptyTop}}"  wx:if="{{listSize==0}}" class="empty" emptySrc="{{emptySrc}}" emptyHintStr="{{emptyHintStr}}"></empty>
+  <view class='list' wx:if="{{listSize!=0}}">
+    <view style="width:750rpx;height:{{topheight}}px"></view>
+    <slot name="list"></slot>
+  </view>
+</view>
+
