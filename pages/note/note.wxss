@@ -5,7 +5,7 @@
 .top {
   background: #66ccff;
   padding: 12px 12px 12px 12px;
-  align-items: center;
+  align-items: flex-start;
 }
 .bottom{
   padding: 16px 6px 16px 12px;
@@ -15,20 +15,24 @@
   color:white;
   flex: 1;
   margin-right: 10px;
+  word-wrap: break-word;
 }
 .date{
   color:white;
 }
 .content{
   color:#66ccff;
-  flex: 1;
+  flex: 5;
   margin-right: 10px;
+  text-overflow: ellipsis;
+  line-height: 50rpx;
+  word-wrap: break-word;
 }
 .folder{
   color:white;
   background: #66ccff;
-  padding: 2px 6px 2px 6px;
-  max-width: 90px;
+  padding: 4px 6px 4px 6px;
+  flex: 2;
   text-overflow: ellipsis;
   overflow: hidden;
   word-break: break-all;

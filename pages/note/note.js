@@ -5,12 +5,57 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[{
+    
+  },
+  properties: {
+    list: {
+      type: Object,
+      value: [] //item对象内容{url:"",localUrl:"",progress:0}
+    },
+  },
+
+  detail:function(e){
+    console.log(JSON.stringify(e.currentTarget.dataset))
+    wx.navigateTo({
+      url: './detail?id=' + e.currentTarget.dataset.id,
+    })
+  },
+
+  isEmpty(str){
+    return str==null || str==undefined || str=='';
+  },
+
+  getMinString(str, min){
+    let dot = '';
+    if(str.length>min){
+      dot = '...';
+    }
+    return this.isEmpty(str) ? '' : str.substring(0, min) + dot;
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    var tmpList = [{
       id: 0,
-      title:'t1t1t1t1t1t1t1t1t1t1t1t1t1t1t1t1',
-      content:'前台、后台定义： 当用户点击左上角关闭，或者按了设备 Home 键离开微信，小程序并没有直接销毁，而是进入了后台；当再次进入微信或再次打开小程序，又会从后台进入前台。需要注意的是：只有当小程序进入后台一定时间，或者系统资源占用过高，才会被真正的销毁。',
-      date:'2018年02月07日',
-      folder:'好长好长的笔记本好长好长的笔记本',
+      title: '又会从后台进入前台又会从后台进入前台又会从后台进入前台又会从后台进入前台又会从后台进入前台',
+      content: '又会从后台进入前台又会从后台进入前台又会从后台进入前台又会从后台进入前台',
+      date: '2018年02月07日',
+      folder: '好长好长的笔记本好长好长的笔记本',
     }, {
       id: 1,
       title: 't1',
@@ -65,53 +110,14 @@ Page({
       content: 'c1',
       date: 'd1',
       folder: 'f1',
-    }, {
-      id: 10,
-      title: 't1',
-      content: 'c1',
-      date: 'd1',
-      folder: 'f1',
-    }, {
-      id: 11,
-      title: 't1',
-      content: 'c1',
-      date: 'd1',
-      folder: 'f1',
-    }, {
-      id: 12,
-      title: 't1',
-      content: 'c1',
-      date: 'd1',
-      folder: 'f1',
-    },]
-  },
-
-  detail:function(e){
-    console.log(JSON.stringify(e.currentTarget.dataset))
-    wx.navigateTo({
-      url: './detail?id=' + e.currentTarget.dataset.id,
+    }]; 
+    tmpList.forEach((element) => {
+      element.temp = this.getMinString(element.title, 9);
+      element.tempContent = this.getMinString(element.content, 32);
+      element.tempFolder = this.getMinString(element.folder, 11);
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+    console.log(tmpList[0])
+    this.setData({list:tmpList});
   },
 
   /**

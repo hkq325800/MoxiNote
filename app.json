@@ -17,8 +17,8 @@
   "tabBar": {
     "position": "bottom",
     "backgroundColor": "#000",
-    "selectedColor": "white",
-    "color": "gray",
+    "selectedColor": "#66ccff",
+    "color": "#fff",
     "list": [
       {
         "iconPath": "res/tabar_home_normol.png",
@@ -44,5 +44,6 @@
     "request": 10000,
     "downloadFile": 10000
   },
-  "debug": true
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
 }
